@@ -1,0 +1,82 @@
+2023-08-07 10:24:56,426 - sn=9999999999查询不存在
+2023-08-07 10:40:43,895 - sn=9999999999查询不存在
+2023-08-07 11:23:10,909 - 文件转换对象失败
+java.io.FileNotFoundException: config.txt (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at util.JsonToMap.jsonToMap(JsonToMap.java:15)
+	at App.main(App.java:27)
+2023-08-07 13:19:40,551 - init datasource error, url: jdbc:informix-sqli://192.168.63.144:9088/asd:INFORMIXSERVER=gbaseserver;
+java.sql.SQLException: com.informix.asf.IfxASFException: Attempt to connect to database server (gbaseserver) failed.
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1528)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.informix.jdbc.IfxDriver.connect(IfxDriver.java:245)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1408)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:684)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:991)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:987)
+	at util.DBUtil.getConn(DBUtil.java:65)
+	at Operation.Read.getEntry(Read.java:68)
+	at App$1.run(App.java:36)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.informix.asf.IfxASFException: Attempt to connect to database server (gbaseserver) failed.
+	at com.informix.util.IfxErrMsg.getLocIfxASFException(IfxErrMsg.java:751)
+	at com.informix.asf.Connection.openSocket(Connection.java:1857)
+	at com.informix.asf.Connection.<init>(Connection.java:399)
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1248)
+	... 14 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at com.informix.asf.Connection.getSocket(Connection.java:2203)
+	at com.informix.asf.Connection.openSocket(Connection.java:1819)
+	... 16 common frames omitted
+2023-08-07 13:19:40,560 - {dataSource-1} init error
+java.sql.SQLException: com.informix.asf.IfxASFException: Attempt to connect to database server (gbaseserver) failed.
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1528)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.informix.jdbc.IfxDriver.connect(IfxDriver.java:245)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1408)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:684)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:991)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:987)
+	at util.DBUtil.getConn(DBUtil.java:65)
+	at Operation.Read.getEntry(Read.java:68)
+	at App$1.run(App.java:36)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.informix.asf.IfxASFException: Attempt to connect to database server (gbaseserver) failed.
+	at com.informix.util.IfxErrMsg.getLocIfxASFException(IfxErrMsg.java:751)
+	at com.informix.asf.Connection.openSocket(Connection.java:1857)
+	at com.informix.asf.Connection.<init>(Connection.java:399)
+	at com.informix.jdbc.IfxSqliConnect.<init>(IfxSqliConnect.java:1248)
+	... 14 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.connect(Socket.java:555)
+	at com.informix.asf.Connection.getSocket(Connection.java:2203)
+	at com.informix.asf.Connection.openSocket(Connection.java:1819)
+	... 16 common frames omitted
+2023-08-07 13:35:09,312 - sn=9999999999查询不存在

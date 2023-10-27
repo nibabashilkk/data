@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="itecldap-lb-20230508-jdk1.8_v01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/itecldap-lb-20230508-jdk1.8_v01.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

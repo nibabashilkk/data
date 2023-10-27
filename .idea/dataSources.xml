@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="8t" uuid="aff3597c-aeaf-4adb-830a-a709331e1ebd">
+      <driver-ref>java.sql.Driver</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.informix.jdbc.IfxDriver</jdbc-driver>
+      <jdbc-url>jdbc:informix-sqli://172.19.0.1:9088/gbasedb:INFORMIXSERVER=gbaseserver;</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
